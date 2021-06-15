@@ -20,7 +20,7 @@ function Detail() {
 
             }
         })
-    },[])
+    },[id])
     return (
         <Container>
             {movie && (
@@ -66,6 +66,7 @@ const Container=styled.div `
 min-height: calc(100vh - 70px);
 padding:0 calc(3.5vw + 5px);
 postion: relative;
+top: 72px;
 `
 const Background=styled.div `
 top:0; bottom:0; right:0; left:0;
@@ -77,22 +78,32 @@ img {
     width:100%;
     height:100%;
     object-fill:cover;
+    
+}
+@media (max-width: 768px) {
+      width: initial;
 }
 `
 
 const ImgTitle=styled.div `
-height: 30vh;
-min-height: 170px;
-width: 35vw;
-min-width: 200px;
-img {
-    width:100%;
-    height: 100%;
-    object-fit: contain;
-}
+  align-items: flex-end;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  margin: 0px auto;
+  height: 30vw;
+  min-height: 170px;
+  padding-bottom: 24px;
+  width: 100%;
+  img {
+    max-width: 600px;
+    min-width: 200px;
+    width: 35vw;
+  }
 `
 
 const Controls=styled.div `
+padding-top:20px;
 display: flex;
 align-items:center;
 `
