@@ -1,4 +1,4 @@
-# Coding Ninjas Assignment - Events Page Redesign using React
+# DisneyPlus Clone
 
 ![Screenshot](Screenshot.png)
 
