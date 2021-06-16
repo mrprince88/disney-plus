@@ -32,6 +32,7 @@ function Detail() {
             <img src={movie.titleImg}></img>
             </ImgTitle>
             <Controls>
+                <Buttons>
                 <PlayButton>
                     <img src="/images/play-icon-black.png"/>
                     <span>PLAY</span>
@@ -40,12 +41,15 @@ function Detail() {
                     <img src="/images/play-icon-white.png"/>
                     <span>TRAILER</span>
                 </TrailerButton>
+                </Buttons>
+                <Options>
                 <AddButton>
                     <span>+</span>
                 </AddButton>
                 <GroupButton>
                     <img src="/images/group-icon.png" />
                 </GroupButton>
+                </Options>
             </Controls>
             <SubTitle>
                 {movie.subTitle}
@@ -106,6 +110,22 @@ const Controls=styled.div `
 padding-top:20px;
 display: flex;
 align-items:center;
+@media(max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+}
+`
+const Buttons=styled.div `
+display: flex;
+@media(max-width: 768px) {
+}
+`
+const Options=styled.div `
+display: flex;
+@media(max-width: 768px) {
+
+    margin-top: 20px;
+}
 `
 
 const PlayButton=styled.button `

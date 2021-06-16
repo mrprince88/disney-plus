@@ -51,11 +51,12 @@ border-radius: 10px;
 cursor: pointer;
 margin-top: 30px;
 display: grid;
-@media(min-width: 768px) {
-grid-template-columns:repeat(5,minmax(0,1fr));
-}
+grid-template-columns:repeat(5,auto);
 padding: 30px 0px 26px;
 grid-gap: 25px;
+@media(max-width: 768px) {
+    grid-gap: 5px;
+}
 
 div {
     position: relative;

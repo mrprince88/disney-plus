@@ -61,13 +61,24 @@ font-family:"Roboto","HelveticaNeue-Light",sans-serif;
 `
 
 const Content=styled.div `
+padding: 5px;
 display: grid;
-grid-gap: 25px;
-grid-template-columns: repeat(2,minmax(0,1fr));
+grid-gap: 15px;
+grid-template-columns: repeat(auto-fill,1fr);
+grid-auto-flow: column;
+grid-auto-columns: minmax(160px,1fr);
+overflow-x: auto;
+overflow-y: visible;
+&::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+}
+
 @media(min-width: 768px) {
+grid-gap: 25px;
 grid-template-columns:repeat(4,minmax(0,1fr));
 }
-margin-bottom: 50px;
+margin-bottom: 25px;
 div {
     border-radius: 10px;
     cursor: pointer;
