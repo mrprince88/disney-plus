@@ -1,4 +1,4 @@
-# DisneyPlus Clone Using ReactJS and Redux
+# DisneyPlus Clone Using ReactJS, Redux and Firebase
 
 ![Screenshot](Screenshot.png)
 
