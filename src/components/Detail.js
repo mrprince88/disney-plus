@@ -186,4 +186,10 @@ const Description = styled.div`
     margin-top: 16px;
     color: rgb(249, 249, 249);
     max-width: 760px;
+    @media(max-width:768px) {
+    height: 80px;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
 `
