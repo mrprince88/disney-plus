@@ -1,6 +1,6 @@
 # Disney Plus Clone
 
-#### Fresh redesign for Disney Plus service
+#### Fresh new design for Disney Plus service
 
 ## Features
 - 📌 Used firebase to import data from database
@@ -12,8 +12,11 @@
 - Redux
 - Styled components
 - Firebase Authentication
+- Firebase FireStore
 
 ## Screenshots
 <img src="screenshots/screenshot4.png">
-<img src="screenshots/screenshot2.png">
-<img src="screenshots/screenshot3.png">
+<div>
+<img src="screenshots/screenshot2.png" width="50%">
+<img src="screenshots/screenshot3.png" width="50%">
+</div>
