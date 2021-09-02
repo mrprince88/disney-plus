@@ -1,7 +1,19 @@
-# DisneyPlus Clone Using ReactJS, Redux and Firebase
+# Disney Plus Clone
 
-![Screenshot](Screenshot.png)
+#### Fresh redesign for Disney Plus service
 
-Complete Responsive Design
+## Features
+- 📌 Used firebase to import data from database
+- 📌 Used Firebase authentication service
+- 📌 Completely responsive design
 
-![Screenshot](ScreenshotResponsive.png)
+## Tech Used
+- ReactJS
+- Redux
+- Styled components
+- Firebase Authentication
+
+## Screenshots
+<img src="screenshots/screenshot4.png">
+<img src="screenshots/screenshot2.png">
+<img src="screenshots/screenshot3.png">

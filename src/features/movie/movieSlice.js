@@ -1,21 +1,30 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice,createAsyncThunk} from "@reduxjs/toolkit";
+import db from '../../firebase';
 
 const initialState= {
     movies: []
 }
+
+export const fetchMovies= createAsyncThunk(
+  'movie/fetchMovies', async() => {
+  const temp = await db.collection("movies").get();
+  return temp.docs.map((doc)=>{
+    return {id: doc.id,...doc.data()}
+  })
+})
 
 
 const movieSlice = createSlice({
     name:"movie",
     initialState,
     reducers: {
-        setMovies:(state,action)=>{
-            state.movies=action.payload;
+    },
+    extraReducers: {
+      [fetchMovies.fulfilled]: (state,{payload}) =>{
+            state.movies=payload;
         }
-    }
+      }
 })
-
-export const {setMovies}=movieSlice.actions;
 
 export const selectMovies=(state) =>state.movie.movies;
 

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { auth,provider} from '../firebase';
 import {useHistory} from 'react-router-dom';
 import {
-  selectUserName,
   selectUserPhoto,
   setUserLogin,
   setSignOut
@@ -14,7 +13,6 @@ function Header () {
 
   const dispatch=useDispatch();
   const history=useHistory();
-  const userName=useSelector(selectUserName);
   const userPhoto=useSelector(selectUserPhoto);
 
   useEffect(()=>{
@@ -137,7 +135,7 @@ padding: 0 20px;
   }
 }
 
-@media(min-width:768px) {
+@media(min-width:850px) {
   .hamburger{
     display:none;
   }
@@ -152,13 +150,7 @@ padding-left:5px;
 padding-right:6px;
 img {
 width: 80px;
-z-index:3;
-}
-@media(max-width:768px) {
-  width:100%;
-  height:100%;
-  display:flex;
-  justify-content: start;
+z-index:2;
 }
 `
 const NavMenu = styled.div `
@@ -210,24 +202,21 @@ div {
   justify-content: space-evenly;
   left:0;
   top:0;
-  width: 80%;
+  width: 70%;
   height: 100vh;
   z-index:2;
-  overflow:hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
   ${({show})=>{
     if(!show) {
   return `
       transform: translateX(-100%);
+      box-shadow:0;
   `
   }
   else {
   return `
   transform: translateX(0);
-  &: after {
-    content:"";
-    background: grey;
-  }
+  box-shadow:0 0 0 100vw rgba(8, 10, 12, 0.75);
   `
   }
   }

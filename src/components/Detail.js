@@ -6,8 +6,7 @@ import db from "../firebase";
 function Detail() {
     const {id}= useParams();
     const [movie,setMovie]=useState();
-
-
+    
     useEffect(()=>{
         db.collection("movies")
         .doc(id)
@@ -21,24 +20,25 @@ function Detail() {
             }
         })
     },[id])
+
     return (
         <Container>
             {movie && (
             <>
             <Background>
-            <img src={movie.backgroundImg}></img>
+            <img src={movie.backgroundImg} alt={movie.title}></img>
             </Background>
             <ImgTitle>
-            <img src={movie.titleImg}></img>
+            <img src={movie.titleImg} alt={movie.title}></img>
             </ImgTitle>
             <Controls>
                 <Buttons>
                 <PlayButton>
-                    <img src="/images/play-icon-black.png"/>
+                    <img src="/images/play-icon-black.png" alt="play"/>
                     <span>PLAY</span>
                 </PlayButton>
                 <TrailerButton>
-                    <img src="/images/play-icon-white.png"/>
+                    <img src="/images/play-icon-white.png" alt="play"/>
                     <span>TRAILER</span>
                 </TrailerButton>
                 </Buttons>
@@ -47,7 +47,7 @@ function Detail() {
                     <span>+</span>
                 </AddButton>
                 <GroupButton>
-                    <img src="/images/group-icon.png" />
+                    <img src="/images/group-icon.png" alt="group"/>
                 </GroupButton>
                 </Options>
             </Controls>

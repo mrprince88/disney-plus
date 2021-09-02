@@ -1,17 +1,26 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styled from 'styled-components';
 import {selectMovies} from "../features/movie/movieSlice";
 import {useSelector} from "react-redux";
 import { Link } from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {fetchMovies} from '../features/movie/movieSlice';
 
 function Movies() {
 
+   const dispatch=useDispatch();
+    
+   useEffect(()=>{
+      dispatch(fetchMovies())
+   },[])
+
    const movies=useSelector(selectMovies);
+   
     return (
         <Container>
             <h3>Recommened For You</h3>
             <Content>
-               {movies && movies.filter((movie)=>movie.type=="recommend").map((movie)=>(
+               {movies && movies.filter((movie)=>movie.type==="recommend").map((movie)=>(
                 <div key={movie.id}>
                    <Link to={`/detail/${movie.id}`}>
                      <img src={movie.cardImg}/>
@@ -21,7 +30,7 @@ function Movies() {
             </Content>
             <h3>New to Disney+</h3>
             <Content>
-               {movies && movies.filter((movie)=>movie.type=="new").map((movie)=>(
+               {movies && movies.filter((movie)=>movie.type==="new").map((movie)=>(
                 <div key={movie.id}>
                    <Link to={`/detail/${movie.id}`}>
                      <img src={movie.cardImg}/>
@@ -31,7 +40,7 @@ function Movies() {
             </Content>
             <h3>Trending</h3>
             <Content>
-               {movies && movies.filter((movie)=>movie.type=="trending").map((movie)=>(
+               {movies && movies.filter((movie)=>movie.type==="trending").map((movie)=>(
                 <div key={movie.id}>
                    <Link to={`/detail/${movie.id}`}>
                      <img src={movie.cardImg}/>
@@ -41,7 +50,7 @@ function Movies() {
             </Content>
             <h3>Originals</h3>
             <Content>
-               {movies && movies.filter((movie)=>movie.type=="original").map((movie)=>(
+               {movies && movies.filter((movie)=>movie.type==="original").map((movie)=>(
                 <div key={movie.id}>
                    <Link to={`/detail/${movie.id}`}>
                      <img src={movie.cardImg}/>
