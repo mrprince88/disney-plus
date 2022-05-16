@@ -14,7 +14,7 @@
 - Firebase Authentication
 - Firebase FireStore
 
-For demo, press <a href="https://disney-plus-f5746.firebaseapp.com/home" target="_blank">here</a>.
+For demo, click <a href="https://disney-plus-f5746.firebaseapp.com/home" target="_blank">here</a>.
 ## Screenshots
 <img src="screenshots/screenshot4.png">
 <span>
