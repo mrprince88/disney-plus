@@ -7,8 +7,8 @@ For demo, click <a href="https://disney-plus-f5746.firebaseapp.com/home" target=
 <br />
 <img src="screenshots/screenshot4.png">
 <span>
-<img src="screenshots/screenshot2.png" width="50%">
-<img src="screenshots/screenshot3.png" width="50%">
+<img src="screenshots/screenshot2.png" width="40%">
+<img src="screenshots/screenshot3.png" width="40%">
 </span>
 
 <br />
